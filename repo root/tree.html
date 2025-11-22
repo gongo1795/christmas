@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>🎄 크리스마스 트리 꾸미기</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="tree.js" defer></script>
+</head>
+<body class="page-tree">
+  <div class="snow-overlay"></div>
+
+  <header class="site-header">
+    <nav class="nav">
+      <div class="logo">🎄 Christmas Night</div>
+      <ul class="nav-links">
+        <li><a href="index.html">홈</a></li>
+        <li><a href="letter.html">편지 보내기</a></li>
+        <li><a href="tree.html" class="active">트리 꾸미기</a></li>
+      </ul>
+    </nav>
+
+    <section class="sub-hero">
+      <h1>🎄 나만의 크리스마스 트리 꾸미기</h1>
+      <p>원하는 장식을 선택하고 트리 영역을 클릭해서 장식을 달아보세요!</p>
+    </section>
+  </header>
+
+  <main class="main">
+    <section class="section">
+      <div class="tree-layout">
+        <aside class="palette">
+          <h2>장식 선택 🎀</h2>
+          <div class="palette-buttons">
+            <button class="ornament-btn active" data-emoji="🔴">🔴 빨간 볼</button>
+            <button class="ornament-btn" data-emoji="🟡">🟡 노란 볼</button>
+            <button class="ornament-btn" data-emoji="🔵">🔵 파란 볼</button>
+            <button class="ornament-btn" data-emoji="⭐">⭐ 별</button>
+            <button class="ornament-btn" data-emoji="🎁">🎁 선물</button>
+            <button class="ornament-btn" data-emoji="❄️">❄️ 눈송이</button>
+          </div>
+
+          <div class="palette-actions">
+            <button id="clearTreeBtn" class="btn danger">모든 장식 지우기</button>
+            <p class="hint">트리 영역 아무 곳이나 클릭하면 선택한 장식이 달립니다.</p>
+          </div>
+        </aside>
+
+        <section class="tree-area-wrapper">
+          <h2>트리 영역</h2>
+          <div id="tree-area">
+            <div class="css-tree">
+              <div class="tree-layer layer-1"></div>
+              <div class="tree-layer layer-2"></div>
+              <div class="tree-layer layer-3"></div>
+              <div class="tree-trunk"></div>
+              <div class="tree-star-top">⭐</div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="section section-subtle">
+      <h2>작동 설명</h2>
+      <ol class="info-list numbered">
+        <li>왼쪽에서 원하는 장식을 클릭해서 선택합니다.</li>
+        <li>오른쪽 초록 트리 영역을 클릭하면 그 위치에 장식 이모지가 추가됩니다.</li>
+        <li>장식을 전부 없애고 싶으면 “모든 장식 지우기” 버튼을 누릅니다.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Christmas Project on GitHub Pages · Made by 영옥</p>
+  </footer>
+</body>
+</html>
