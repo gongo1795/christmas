@@ -130,6 +130,29 @@ body {
   border: 1px solid rgba(248, 113, 113, 0.6);
 }
 
+.snow-toggle {
+  border: 1px solid rgba(248, 250, 252, 0.6);
+  background: rgba(15, 23, 42, 0.6);
+  color: #f9fafb;
+  border-radius: 999px;
+  width: 80px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: background 0.2s ease, transform 0.08s ease, box-shadow 0.15s ease;
+}
+
+.snow-toggle:hover {
+  background: rgba(248, 250, 252, 0.12);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+
 /* 히어로 */
 .hero {
   display: grid;
