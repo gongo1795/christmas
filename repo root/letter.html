@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>💌 크리스마스 편지 보내기</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="letter.js" defer></script>
+</head>
+<body class="page-letter">
+  <div class="snow-overlay"></div>
+
+  <header class="site-header">
+    <nav class="nav">
+      <div class="logo">🎄 Christmas Night</div>
+      <ul class="nav-links">
+        <li><a href="index.html">홈</a></li>
+        <li><a href="letter.html" class="active">편지 보내기</a></li>
+        <li><a href="tree.html">트리 꾸미기</a></li>
+      </ul>
+    </nav>
+
+    <section class="sub-hero">
+      <h1>💌 크리스마스 편지 보내기</h1>
+      <p>받는 사람의 이메일과 메시지를 입력하면, 메일 작성 창이 자동으로 열립니다.</p>
+    </section>
+  </header>
+
+  <main class="main">
+    <section class="section">
+      <form class="letter-form" id="letterForm">
+        <div class="form-group">
+          <label for="fromName">보내는 사람 이름</label>
+          <input type="text" id="fromName" placeholder="예: 영옥" />
+        </div>
+
+        <div class="form-group">
+          <label for="toName">받는 사람 이름</label>
+          <input type="text" id="toName" placeholder="예: 친구, 가족, 교수님 등" />
+        </div>
+
+        <div class="form-group">
+          <label for="toEmail">받는 사람 이메일 주소 <span class="required">*</span></label>
+          <input
+            type="email"
+            id="toEmail"
+            placeholder="example@example.com"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="message">편지 내용 <span class="required">*</span></label>
+          <textarea
+            id="message"
+            rows="7"
+            placeholder="전하고 싶은 크리스마스 메시지를 적어 주세요 :)"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group inline">
+          <label>
+            <input type="checkbox" id="addSignature" checked />
+            맨 아래에 보내는 사람 이름을 자동으로 넣기
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">✉ 메일 프로그램 열기</button>
+          <button type="button" id="previewBtn" class="btn secondary">미리보기</button>
+        </div>
+
+        <p class="hint">
+          ⚠ 실제 메일 전송은 여러분의 이메일 프로그램(예: Gmail, 네이버 메일, 아웃룩 등)에서 완료해야 합니다.
+        </p>
+      </form>
+    </section>
+
+    <section class="section section-subtle">
+      <h2>📄 편지 미리보기</h2>
+      <pre id="previewBox" class="preview-box">아직 미리보기가 없습니다. "미리보기" 버튼을 눌러보세요.</pre>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Christmas Project on GitHub Pages · Made by 영옥</p>
+  </footer>
+</body>
+</html>
