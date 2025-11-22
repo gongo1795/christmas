@@ -153,10 +153,18 @@ body[data-theme="light"] .nav {
 }
 
 .nav-links a.active {
-  background: rgba(248, 113, 113, 0.18);
-  color: #fed7aa;
-  border: 1px solid rgba(248, 113, 113, 0.6);
+  background: rgba(22, 163, 74, 0.2);
+  color: #fefce8;
+  border: 1px solid rgba(22, 163, 74, 0.8);
 }
+
+/* 라이트 모드에서 active 링크 */
+body[data-theme="light"] .nav-links a.active {
+  background: rgba(248, 113, 113, 0.1);
+  color: #991b1b;
+  border-color: rgba(248, 113, 113, 0.8);
+}
+
 
 /* 히어로 */
 .hero {
