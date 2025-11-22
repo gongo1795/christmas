@@ -11,25 +11,23 @@
   position: fixed;
   inset: 0;
   background-image:
-    radial-gradient(circle, rgba(255, 255, 255, 0.9) 1px, transparent 2px),
-    radial-gradient(circle, rgba(255, 255, 255, 0.6) 1px, transparent 2px);
-  background-size: 180px 180px, 240px 240px;
-  background-position: 0 0, 90px 90px;
+    radial-gradient(circle, rgba(255, 255, 255, 0.9) 2px, transparent 3px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.6) 2px, transparent 3px);
+  background-size: 160px 160px, 220px 220px;
+  background-position: 0 0, 80px 80px;
   opacity: 1; /* 처음에는 눈 ON */
-  animation: snow-move 18s linear infinite;
+  animation: snow-move 14s linear infinite;
   z-index: 999;        /* 맨 위에 올라오게! */
   transition: opacity 0.3s ease;
 }
 
 @keyframes snow-move {
-  from { transform: translateY(-40px); }
-  to   { transform: translateY(40px); }
-}
-
-
-@keyframes snow-move {
-  from { transform: translateY(-40px); }
-  to   { transform: translateY(40px); }
+  from {
+    background-position: 0 0, 80px 80px;
+  }
+  to {
+    background-position: 0 600px, 80px 680px;
+  }
 }
 
 
