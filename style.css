@@ -6,19 +6,47 @@
 }
 
 :root {
-  --bg-dark: #050816;
-  --bg-card: rgba(15, 23, 42, 0.9);
-  --bg-subtle: rgba(15, 23, 42, 0.6);
-  --accent: #f97316;
-  --accent-soft: rgba(248, 113, 113, 0.2);
-  --text-main: #e5e7eb;
-  --text-muted: #9ca3af;
-  --border-subtle: rgba(148, 163, 184, 0.5);
-  --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.8);
+  /* 🎄 기본은 '다크 크리스마스' 분위기 */
+  --bg-dark: #04110c; /* 짙은 초록 계열 */
+  --bg-card: rgba(7, 26, 18, 0.96);
+  --bg-subtle: rgba(12, 37, 24, 0.9);
+
+  /* 크리스마스 컬러 (빨강 + 초록) */
+  --accent: #dc2626; /* 레드 */
+  --accent-green: #16a34a; /* 그린 */
+  --accent-soft: rgba(220, 38, 38, 0.18);
+
+  --text-main: #f9fafb;
+  --text-muted: #bfdbfe;
+  --border-subtle: rgba(148, 163, 184, 0.6);
+  --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.85);
+
   --radius-lg: 18px;
   --radius-xl: 24px;
   --nav-height: 64px;
 }
+
+/* 🌞 화이트(라이트) 모드일 때 변수 덮어쓰기 */
+body[data-theme="light"] {
+  --bg-dark: #fdfcfb;
+  --bg-card: rgba(255, 255, 255, 0.97);
+  --bg-subtle: rgba(248, 250, 252, 0.96);
+
+  --text-main: #111827;
+  --text-muted: #4b5563;
+  --border-subtle: rgba(203, 213, 225, 0.95);
+
+  /* 라이트 모드에서도 레드/그린 유지, 살짝 더 쨍하게 */
+  --accent: #b91c1c;
+  --accent-green: #15803d;
+  --accent-soft: rgba(220, 38, 38, 0.08);
+
+  --shadow-soft: 0 18px 35px rgba(148, 163, 184, 0.45);
+
+  background: radial-gradient(circle at top, #fff7f7, #f1f5f9);
+  color: var(--text-main);
+}
+
 
 html,
 body {
