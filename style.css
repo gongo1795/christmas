@@ -158,6 +158,36 @@ body[data-theme="light"] .nav {
   border: 1px solid rgba(22, 163, 74, 0.8);
 }
 
+.theme-toggle {
+  border: 1px solid rgba(248, 250, 252, 0.45);
+  background: rgba(15, 23, 42, 0.4);
+  color: #fefce8;
+  border-radius: 999px;
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: background 0.2s ease, transform 0.08s ease, box-shadow 0.15s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(248, 250, 252, 0.1);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* 라이트 모드에서 토글 버튼 */
+body[data-theme="light"] .theme-toggle {
+  background: rgba(255, 255, 255, 0.9);
+  color: #b91c1c;
+  border-color: rgba(209, 213, 219, 0.9);
+}
+
+
 /* 라이트 모드에서 active 링크 */
 body[data-theme="light"] .nav-links a.active {
   background: rgba(248, 113, 113, 0.1);
