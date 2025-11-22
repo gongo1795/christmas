@@ -17,9 +17,15 @@
   background-position: 0 0, 90px 90px;
   opacity: 1; /* 처음에는 눈 ON */
   animation: snow-move 18s linear infinite;
-  z-index: 999;        /* 항상 제일 위에 */
-  transition: opacity 0.3s ease; /* 토글할 때 부드럽게 */
+  z-index: 999;        /* 맨 위에 올라오게! */
+  transition: opacity 0.3s ease;
 }
+
+@keyframes snow-move {
+  from { transform: translateY(-40px); }
+  to   { transform: translateY(40px); }
+}
+
 
 @keyframes snow-move {
   from { transform: translateY(-40px); }
