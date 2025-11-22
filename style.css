@@ -57,28 +57,6 @@ body {
   min-height: 100%;
 }
 
-/* 눈 효과용 오버레이 (간단 버전) */
-.snow-overlay {
-  pointer-events: none;
-  position: fixed;
-  inset: 0;
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.9) 1px, transparent 2px),
-    radial-gradient(circle, rgba(255, 255, 255, 0.7) 1px, transparent 2px);
-  background-size: 180px 180px, 240px 240px;
-  background-position: 0 0, 90px 90px;
-  opacity: 0.22;
-  animation: snow-move 18s linear infinite;
-  z-index: -1;
-}
-
-@keyframes snow-move {
-  from {
-    transform: translateY(-40px);
-  }
-  to {
-    transform: translateY(40px);
-  }
-}
 
 /* 공통 레이아웃 */
 .site-header {
