@@ -5,6 +5,28 @@
   box-sizing: border-box;
 }
 
+/* 페이지 전체에 덮는 눈 효과 레이어 */
+.snow-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.9) 1px, transparent 2px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.6) 1px, transparent 2px);
+  background-size: 180px 180px, 240px 240px;
+  background-position: 0 0, 90px 90px;
+  opacity: 1; /* 처음에는 눈 ON */
+  animation: snow-move 18s linear infinite;
+  z-index: 999;        /* 항상 제일 위에 */
+  transition: opacity 0.3s ease; /* 토글할 때 부드럽게 */
+}
+
+@keyframes snow-move {
+  from { transform: translateY(-40px); }
+  to   { transform: translateY(40px); }
+}
+
+
 :root {
   --bg-dark: #050816;
   --bg-card: rgba(15, 23, 42, 0.9);
