@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         toggleSnow(true); // 기본적으로 눈 내림 상태로 시작
     }
 
-    
+
     // --- NEW: 1. D-Day 카운터 로직 ---
     function startCountdown() {
         const countdownEl = document.getElementById('countdown-timer');
@@ -88,7 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-            countdownEl.innerHTML = `D-${days} <br> ${hours}시 ${minutes}분 ${seconds}초`;
+            // ✨ 줄바꿈 태그(<br>)를 제거하고 한 줄로 표시
+            countdownEl.innerHTML = `D-${days} ${hours}시 ${minutes}분 ${seconds}초`; 
         }
 
         const timerInterval = setInterval(updateCountdown, 1000);
