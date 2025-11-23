@@ -13,8 +13,8 @@
     background-color: #FFF;
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px #2C1D1D; 
-    border: 3px solid var(--color-green-christmas); 
+    box-shadow: 0 10px 30px #2C1D1D;  
+    border: 3px solid var(--color-red-christmas); /* 빨간색 실선 */
     text-align: center;
 }
 
