@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // 선물 생성 시작 (1초마다)
             clearInterval(giftInterval);
-            giftInterval = setInterval(createGift, 1000);
+            giftInterval = setInterval(createGift, 1500);
         }
 
         // --- 키보드 이벤트 핸들러 ---
