@@ -74,3 +74,30 @@
     font-size: 1.5em;
     border: 5px dashed var(--color-gold-accent);
 }
+
+/* --- minigame.css 추가: 눈송이 터뜨리기 게임의 컨테이너를 위한 스타일 --- */
+
+/* 게임 영역 크기 및 위치 조정을 위해 game-area 내부의 flex 속성 변경 */
+.game-area {
+    background-color: var(--color-black-text); 
+    height: 500px;
+    border-radius: 8px;
+    /* 기존: display: flex, justify-content: center, align-items: center */
+    flex-direction: column; /* 컨트롤과 캔버스가 수직으로 배치되도록 변경 */
+    padding: 20px;
+    border: 5px dashed var(--color-gold-accent);
+}
+
+/* 눈송이 터뜨리기 게임의 컨테이너 */
+#snowClickerContainer {
+    /* js에서 인라인 스타일로 설정되지만, 기본 배경을 위해 추가 */
+    background-color: #2c3e50; 
+}
+
+/* Falling Gifts / Santa Dodge의 캔버스 컨테이너를 위해 다시 중앙 정렬 */
+#game-controls {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
