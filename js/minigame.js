@@ -75,10 +75,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // --- 선물 생성 함수 ---
         function createGift() {
             const gift = {
-                size: Math.random() * 10 + 15, // 크기 15~25
+                size: Math.random() * 10 + 20, // 크기 15~25
                 x: Math.random() * (canvas.width - 25),
                 y: 0,
-                speed: Math.random() * 1 + 2, // 속도 2~3
+                speed: Math.random() * 1 + 1.5, // 속도 1.5 ~ 2.5
                 color: ['red', 'green', 'gold'][Math.floor(Math.random() * 3)],
                 draw: function() {
                     ctx.fillStyle = this.color;
