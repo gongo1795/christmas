@@ -484,7 +484,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // 타이머 및 생성 인터벌 시작
             startTimer();
             clearInterval(snowflakeCreationInterval);
-            snowflakeCreationInterval = setInterval(createSnowflake, 400); // 0.4초마다 생성 시도
+            snowflakeCreationInterval = setInterval(createSnowflake, 600);  //600ms
         }
 
         startGameBtn.addEventListener('click', startGame);
