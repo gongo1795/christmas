@@ -1,94 +1,70 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <title>💌 크리스마스 편지 보내기</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="letter.js" defer></script>
-  <script src="snow.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎄 편지 보내기</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Hahmlet:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/letter.css"> 
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init("2Ias9NrCsWHi0AP_0"); 
+    </script>
 </head>
-<body class="page-letter">
-  <div class="snow-overlay"></div>
+<body>
+    <div id="snow-container" class="snow-container"></div> 
 
-  <header class="site-header">
-    <nav class="nav">
-      <div class="logo">🎄 Christmas Night</div>
-       <!-- ✅ 눈 토글 버튼 -->
-      <button class="snow-toggle" id="snowToggle" aria-label="눈 토글">
-        ❄ 눈 끄기
-      </button>
-      <ul class="nav-links">
-        <li><a href="index.html">홈</a></li>
-        <li><a href="letter.html" class="active">편지 보내기</a></li>
-        <li><a href="tree.html">트리 꾸미기</a></li>
-      </ul>
-    </nav>
-
-    <section class="sub-hero">
-      <h1>💌 크리스마스 편지 보내기</h1>
-      <p>받는 사람의 이메일과 메시지를 입력하면, 메일 작성 창이 자동으로 열립니다.</p>
-    </section>
-  </header>
-
-  <main class="main">
-    <section class="section">
-      <form class="letter-form" id="letterForm">
-        <div class="form-group">
-          <label for="fromName">보내는 사람 이름</label>
-          <input type="text" id="fromName" placeholder="예: 영옥" />
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo"><a href="index.html">Happy Christmas</a></div>
+            <nav class="nav-links">
+                <a href="index.html">메인</a>
+                <a href="letter.html">편지 보내기</a>
+                <a href="tree-decorator.html">트리 꾸미기</a>
+            </nav>
         </div>
+    </header>
 
-        <div class="form-group">
-          <label for="toName">받는 사람 이름</label>
-          <input type="text" id="toName" placeholder="예: 친구, 가족, 교수님 등" />
+    <main class="letter-main">
+        <div class="letter-container">
+            <h1>💌 마음을 담아 편지를 보내세요</h1>
+            <p class="subtitle">모든 필드를 작성하고 산타에게 소원을 전달하세요.</p>
+            
+            <form id="letter-form">
+                <div class="form-group">
+                    <label for="to_email">받는 사람 이메일:</label>
+                    <input type="email" id="to_email" name="to_email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="from_name">보내는 사람 이름:</label>
+                    <input type="text" id="from_name" name="from_name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">제목:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">편지 내용:</label>
+                    <textarea id="message" name="message" rows="10" required></textarea>
+                </div>
+                
+                <button type="submit" class="button-red">편지 전송하기 📮</button>
+                <p id="feedback" class="feedback-message"></p>
+            </form>
         </div>
+    </main>
+    
+    <button id="snow-toggle">❄️</button> 
 
-        <div class="form-group">
-          <label for="toEmail">받는 사람 이메일 주소 <span class="required">*</span></label>
-          <input
-            type="email"
-            id="toEmail"
-            placeholder="example@example.com"
-            required
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="message">편지 내용 <span class="required">*</span></label>
-          <textarea
-            id="message"
-            rows="7"
-            placeholder="전하고 싶은 크리스마스 메시지를 적어 주세요 :)"
-            required
-          ></textarea>
-        </div>
-
-        <div class="form-group inline">
-          <label>
-            <input type="checkbox" id="addSignature" checked />
-            맨 아래에 보내는 사람 이름을 자동으로 넣기
-          </label>
-        </div>
-
-        <div class="form-actions">
-          <button type="submit" class="btn primary">✉ 메일 프로그램 열기</button>
-          <button type="button" id="previewBtn" class="btn secondary">미리보기</button>
-        </div>
-
-        <p class="hint">
-          ⚠ 실제 메일 전송은 여러분의 이메일 프로그램(예: Gmail, 네이버 메일, 아웃룩 등)에서 완료해야 합니다.
-        </p>
-      </form>
-    </section>
-
-    <section class="section section-subtle">
-      <h2>📄 편지 미리보기</h2>
-      <pre id="previewBox" class="preview-box">아직 미리보기가 없습니다. "미리보기" 버튼을 눌러보세요.</pre>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>© 2025 Christmas Project on GitHub Pages · Made by 영옥</p>
-  </footer>
-</body>
+    <script src="js/letter.js"></script>
+    <script src="js/script.js"></script> </body>
 </html>

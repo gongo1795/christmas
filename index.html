@@ -1,103 +1,60 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <title>🎄 크리스마스 스페셜 | 홈</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="snow.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎄 메리 크리스마스</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Hahmlet:wght@100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
+<body>
+    <div id="snow-container" class="snow-container"></div> 
 
-<body class="page-home">
-  <div class="snow-overlay"></div>
-
-  <header class="site-header">
-    <nav class="nav">
-      <div class="logo">🎄 Christmas Night</div>
-       <!-- ✅ 눈 토글 버튼 -->
-      <button class="snow-toggle" id="snowToggle" aria-label="눈 토글">
-        ❄ 눈 끄기
-      </button>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">홈</a></li>
-        <li><a href="letter.html">편지 보내기</a></li>
-        <li><a href="tree.html">트리 꾸미기</a></li>
-      </ul>
-    </nav>
-
-    <section class="hero">
-      <div class="hero-content">
-        <h1>메리 크리스마스, 영옥의 웹월드 🎅</h1>
-        <p>
-          올 한 해 수고한 사람들에게<br />
-          따뜻한 편지를 보내고,<br />
-          나만의 트리를 직접 꾸며보는 크리스마스 페이지입니다.
-        </p>
-        <div class="hero-buttons">
-          <a href="letter.html" class="btn primary">💌 크리스마스 편지 쓰러 가기</a>
-          <a href="tree.html" class="btn secondary">🎄 트리 꾸미러 가기</a>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo"><a href="index.html">Happy Christmas</a></div>
+            <nav class="nav-links">
+                <a href="index.html">메인</a>
+                <a href="letter.html">편지 보내기</a>
+                <a href="tree-decorator.html">트리 꾸미기</a>
+            </nav>
         </div>
-      </div>
-      <div class="hero-illust">
-        <div class="hero-tree"></div>
-        <div class="hero-gift gift-1"></div>
-        <div class="hero-gift gift-2"></div>
-      </div>
-    </section>
-  </header>
+    </header>
 
-  <main class="main">
-    <section class="section">
-      <h2>이 페이지에서 할 수 있는 것들</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>💌 크리스마스 편지 보내기</h3>
-          <p>
-            이름과 메시지를 입력하면,<br />
-            메일 프로그램이 자동으로 열리면서<br />
-            크리스마스 편지가 작성되도록 만들었어요.
-          </p>
-          <a href="letter.html" class="card-link">편지 쓰러 가기 →</a>
-        </article>
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="hero-text">
+                <h1>Merry christmas</h1>
+                <p>당신의 소원을 빌고, 트리를 장식하며 따뜻한 겨울을 준비하세요!</p>
+                <div class="hero-actions">
+                    <a href="letter.html" class="button-red">편지 쓰기</a>
+                    <a href="tree-decorator.html" class="button-green">트리 꾸미기</a>
+                </div>
+            </div>
+        </section>
 
-        <article class="card">
-          <h3>🎄 트리 꾸미기</h3>
-          <p>
-            원하는 장식 이모지를 고르고<br />
-            트리를 클릭하면 그 자리에 장식이 달려요.<br />
-            마음에 안 들면 한 번에 비우는 리셋 기능도 있어요.
-          </p>
-          <a href="tree.html" class="card-link">트리 꾸미러 가기 →</a>
-        </article>
+        <section class="feature-cards">
+            <article class="card">
+                <h2>💌 산타에게 편지 보내기</h2>
+                <p>가장 소중한 사람에게, 혹은 마음속 깊이 간직했던 소원을 산타에게 전달하세요.</p>
+                <a href="letter.html" class="button-red">Go to Letter Page</a>
+            </article>
+            
+            <article class="card">
+                <h2>🌲 나만의 트리 꾸미기</h2>
+                <p>다양한 장식과 빛으로 당신의 웹 트리를 화려하게 완성하고 저장하세요!</p>
+                <a href="tree-decorator.html" class="button-green">Go to Decorator</a>
+            </article>
+        </section>
+    </main>
+    
+    <button id="snow-toggle">❄️</button> 
 
-        <article class="card">
-          <h3>✨ 올 한 해 돌아보기</h3>
-          <p>
-            C언어, 웹프로그래밍, AISW 수학까지.<br />
-            바빴던 2025년을 잠깐 돌아보면서<br />
-            내년엔 어떤 개발자가 되고 싶은지 상상해봐도 좋아요.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section section-subtle">
-      <h2>작동 방식 간단 설명</h2>
-      <ul class="info-list">
-        <li>
-          <strong>편지 보내기</strong>는 <code>mailto:</code> 링크를 이용해서<br />
-          👉 사용자의 메일 프로그램(이메일 앱, 브라우저 메일)이 열리도록 했어요.
-          (GitHub Pages는 백엔드가 없어서!)
-        </li>
-        <li>
-          <strong>트리 꾸미기</strong>는 JavaScript로 클릭 좌표를 가져와서<br />
-          👉 그 위치에 장식 이모지를 <code>absolute</code>로 배치해요.
-        </li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>© 2025 Christmas Project on GitHub Pages · Made by 영옥</p>
-  </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
