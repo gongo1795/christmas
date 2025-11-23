@@ -72,7 +72,7 @@
     align-items: center;
     color: var(--color-white-snow);
     font-size: 1.5em;
-    border: 5px dashed var(--color-gold-accent);
+    border: 5px solid var(--color-red-christmas); /* 빨간색 실선 */
 }
 
 /* --- minigame.css 추가: 눈송이 터뜨리기 게임의 컨테이너를 위한 스타일 --- */
