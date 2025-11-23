@@ -352,7 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // 산타 생성 시작 (밀집도를 높이기 위해 0.5초마다 생성)
             clearInterval(santaInterval);
-            santaInterval = setInterval(createSanta, 500);
+            santaInterval = setInterval(createSanta, 350);
         }
 
         // --- 키보드 이벤트 핸들러 ---
