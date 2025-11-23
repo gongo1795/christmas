@@ -67,6 +67,20 @@
     margin: 0 10px;
 }
 
+/* D-Day 카운터 스타일 */
+.countdown-timer { 
+    font-family: var(--font-bangers);
+    font-size: 2.5em;
+    color: var(--color-red-christmas); 
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin: 10px auto;
+    display: inline-block;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    line-height: 1.2;
+}
+
 /* 2. 기능 카드 섹션 */
 .feature-cards {
     display: flex;
