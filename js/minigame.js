@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // --- 플레이어 (루돌프) 설정 ---
         const player = {
-            size: 20,
+            size: 40,
             x: canvas.width / 2 - 10,
             y: canvas.height - 30,
             speed: 4,
